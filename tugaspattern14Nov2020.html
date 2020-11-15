@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PATTERN</title>
+    </head>
+    <body>
+        <h1>PATTERN BINTANG PAGAR</h1>
+        <p id="tembak"></p>
+        <script>
+            //  input = 7
+            // *
+            // # #
+            // * * *
+            // # # # # 
+            // * * * * *
+            // # # # # # # 
+            // * * * * * * *
+            
+            let n = 7
+            let pattern = ''
+            
+            for (let i = 0; i <= n; i++) {
+                for (let k = 0; k <= i; k++) {
+                    if (i %2 === 0) {
+                        pattern += '*'
+                    } else {
+                        pattern += '#'
+                    }
+                }
+                pattern += '</br>'
+            }
+            console.log(pattern)
+
+            let p = document.getElementById("tembak")
+            p.innerHTML = pattern
+        </script>
+    </body>
+</html>
+
+

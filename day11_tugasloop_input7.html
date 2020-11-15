@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SEGITIGA 7</title>
+    </head>
+<body>
+    <div id="HASIL">HASIL PATTERN :</div>
+    <button>LOOP PATTERN</button>
+    <script>
+        let button = document.body.getElementsByTagName('button')
+        let a = 7
+        let b = ''
+        
+        function LoopSegitiga () {
+            for (let i = 0; i < a; i++) {
+                for (let j = 0; j <= i; j++) {
+                    b += a - i + j 
+                }
+                b += '\n'
+            }  
+        }
+
+        button[0].addEventListener('click', (event) => {
+            event.preventDefault()
+            let div = document.getElementById("HASIL")
+            console.log('Hasil Pattern', div)
+
+            div.innerHTML += LoopSegitiga
+
+        })
+        
+    </script>
+</body>
+</html>
